@@ -1,0 +1,9 @@
+/home/engi/Documents/code/weatherReport/rust/weather_reporter/target/debug/deps/librand-1a7877421a5ea44e.rmeta: /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/rand-0.3.23/src/lib.rs /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/rand-0.3.23/src/distributions/mod.rs /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/rand-0.3.23/src/rand_impls.rs
+
+/home/engi/Documents/code/weatherReport/rust/weather_reporter/target/debug/deps/librand-1a7877421a5ea44e.rlib: /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/rand-0.3.23/src/lib.rs /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/rand-0.3.23/src/distributions/mod.rs /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/rand-0.3.23/src/rand_impls.rs
+
+/home/engi/Documents/code/weatherReport/rust/weather_reporter/target/debug/deps/rand-1a7877421a5ea44e.d: /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/rand-0.3.23/src/lib.rs /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/rand-0.3.23/src/distributions/mod.rs /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/rand-0.3.23/src/rand_impls.rs
+
+/home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/rand-0.3.23/src/lib.rs:
+/home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/rand-0.3.23/src/distributions/mod.rs:
+/home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/rand-0.3.23/src/rand_impls.rs:

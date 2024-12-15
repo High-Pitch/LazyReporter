@@ -1,0 +1,9 @@
+/home/engi/Documents/code/weatherReport/rust/weather_reporter/target/debug/deps/libmath-153b3249db3bfb35.rmeta: /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/libmath-0.2.1/src/lib.rs /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/libmath-0.2.1/src/mean.rs /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/libmath-0.2.1/src/round.rs
+
+/home/engi/Documents/code/weatherReport/rust/weather_reporter/target/debug/deps/libmath-153b3249db3bfb35.rlib: /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/libmath-0.2.1/src/lib.rs /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/libmath-0.2.1/src/mean.rs /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/libmath-0.2.1/src/round.rs
+
+/home/engi/Documents/code/weatherReport/rust/weather_reporter/target/debug/deps/math-153b3249db3bfb35.d: /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/libmath-0.2.1/src/lib.rs /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/libmath-0.2.1/src/mean.rs /home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/libmath-0.2.1/src/round.rs
+
+/home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/libmath-0.2.1/src/lib.rs:
+/home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/libmath-0.2.1/src/mean.rs:
+/home/engi/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/libmath-0.2.1/src/round.rs:
