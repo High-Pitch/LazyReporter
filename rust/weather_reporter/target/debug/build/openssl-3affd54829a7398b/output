@@ -32,6 +32,7 @@ cargo:rustc-check-cfg=cfg(ossl300)
 cargo:rustc-check-cfg=cfg(ossl310)
 cargo:rustc-check-cfg=cfg(ossl320)
 cargo:rustc-check-cfg=cfg(ossl330)
+cargo:rustc-cfg=osslconf="OPENSSL_NO_IDEA"
 cargo:rustc-cfg=osslconf="OPENSSL_NO_SSL3_METHOD"
 cargo:rustc-cfg=ossl101
 cargo:rustc-cfg=ossl102
@@ -41,6 +42,3 @@ cargo:rustc-cfg=ossl110h
 cargo:rustc-cfg=ossl111
 cargo:rustc-cfg=ossl111d
 cargo:rustc-cfg=ossl300
-cargo:rustc-cfg=ossl310
-cargo:rustc-cfg=ossl320
-cargo:rustc-cfg=ossl330

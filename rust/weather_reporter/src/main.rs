@@ -87,8 +87,25 @@ impl Weather {
     Ok(())
 }*/
 
-//fn process_data() {
-//}
+fn process_data(content: &str) -> Result<()>{
+    //Used imports
+    use serde_json::Value;
+    //Parsing string and converting to JSON file
+    let data: Value = serde_json::from_str(content)?;
+    //Other variables for establishing
+    let mut temp: f64 = 0.0;
+    let mut pop: f64 = 0.0;
+    let amount_to_average = 6;
+    //Grab the next 24 hours of temps and precepitation and average it
+    for i in 0..amount_to_average {
+        temp += data["list"][i]["main"]["temp"].from_value(f64);
+        pop += data["list"][i]["main"]["pop"].from_value(f64);
+    }
+    let high_of = data["list"][0]["main"]["temp_max"]; 
+    println!("{}", high_of);
+    //println!("{}", data["list"][0]);
+    Ok(())
+}
 
 fn file_write(data: &str) -> Result<()> {
     use chrono::Utc;
@@ -105,6 +122,10 @@ fn file_write(data: &str) -> Result<()> {
 } 
 
 fn main() {
-    println!("Hello, world!");
+    use std::fs;
+    let content: &str = &fs::read_to_string("/home/engi/Documents/projects/weather_reporter/2024-10-02WeatherReport.json")
+    .expect("Should have been able to read the file");
+    //println!("{}", content);
     let _ = file_write("test");
+    let _ = process_data(content);
 }

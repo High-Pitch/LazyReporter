@@ -105,7 +105,7 @@ cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
 cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
 cargo:rerun-if-changed=build/expando.c
 OPT_LEVEL = Some(0)
-OUT_DIR = Some(/home/engi/Documents/projects/weather_Reporter/rust/weather_reporter/target/debug/build/openssl-sys-dac52d3e96c6627f/out)
+OUT_DIR = Some(/home/engi/Documents/projects/weather_reporter/rust/weather_reporter/target/debug/build/openssl-sys-dac52d3e96c6627f/out)
 TARGET = Some(x86_64-unknown-linux-gnu)
 HOST = Some(x86_64-unknown-linux-gnu)
 cargo:rerun-if-env-changed=CC_x86_64-unknown-linux-gnu
@@ -131,12 +131,11 @@ HOST_CFLAGS = None
 cargo:rerun-if-env-changed=CFLAGS
 CFLAGS = None
 CARGO_ENCODED_RUSTFLAGS = Some()
-version: 3_3_2
+version: 3_0_2
+cargo:rustc-cfg=osslconf="OPENSSL_NO_IDEA"
 cargo:rustc-cfg=osslconf="OPENSSL_NO_SSL3_METHOD"
-cargo:conf=OPENSSL_NO_SSL3_METHOD
+cargo:conf=OPENSSL_NO_IDEA,OPENSSL_NO_SSL3_METHOD
 cargo:rustc-cfg=openssl
-cargo:rustc-cfg=ossl330
-cargo:rustc-cfg=ossl320
 cargo:rustc-cfg=ossl300
 cargo:rustc-cfg=ossl101
 cargo:rustc-cfg=ossl102
@@ -150,5 +149,5 @@ cargo:rustc-cfg=ossl111
 cargo:rustc-cfg=ossl111b
 cargo:rustc-cfg=ossl111c
 cargo:rustc-cfg=ossl111d
-cargo:version_number=30300020
+cargo:version_number=30000020
 cargo:include=/usr/include
