@@ -38,8 +38,8 @@ def processData(response):
         amountToAverage = 6
         returnList = []
         #Grab the next 24 hours of temp and precepitation and average it
+        data = response.json()
         for x in range(amountToAverage):
-            data = response.json()
             temp += data["list"][x]["main"]["temp"]
             pop += data["list"][x]["pop"]
         highOf = data["list"][0]["main"]["temp_max"]
