@@ -98,11 +98,11 @@ fn process_data(content: &str) -> Result<()>{
     let amount_to_average = 6;
     //Grab the next 24 hours of temps and precepitation and average it
     for i in 0..amount_to_average {
-        temp += data["list"][i]["main"]["temp"].from_value(f64);
-        pop += data["list"][i]["main"]["pop"].from_value(f64);
+        temp += data["list"][i]["main"]["temp"].as_f64().expect("Temp not a number");
+        pop += data["list"][i]["pop"].as_f64().expect("Pop not a number");
     }
-    let high_of = data["list"][0]["main"]["temp_max"]; 
-    println!("{}", high_of);
+    let high_of = &data["list"][0]["main"]["temp_max"]; 
+    println!("high of {}, with a temp of {}, with a pop of {}", high_of, temp, pop);
     //println!("{}", data["list"][0]);
     Ok(())
 }
