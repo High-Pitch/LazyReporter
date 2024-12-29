@@ -1,6 +1,5 @@
-//use math::round;
-use std::io::*;
-//use serde_json::{Result, Value};
+use math::round;
+use serde_json::{Result, Value};
 //use reqwest::Error;
 
 
@@ -11,14 +10,15 @@ use std::io::*;
     user_id: i32,
 }*/
 
-/* struct Weather {
+struct Weather {
     //structure to make pulling json values easier
+    json: String,
     temp: f64,
-    prec: i16,
-    high_of: i16,
+    prec: f64,
+    high_of: f64
 }
 impl Weather {
-    fn recommender(self) -> (String, String) {
+    fn recommender(&self) -> (String, String) {
         //previously a full independent function in python, now internal to the struct
         //Values for recommendation basis
         let prec_low: f64 = 0.4;
@@ -72,8 +72,27 @@ impl Weather {
 
         return (temp_message, prec_message)
         }
+    fn process_data(&mut self) -> Result<()>{
+            //Parsing string and converting to JSON file
+            let data: Value = serde_json::from_str(&self.json)?;
+            //Other variables for establishing and returning
+            let mut inner_temp: f64 = 0.0;
+            let mut inner_prec: f64 = 0.0;
+            let amount_to_average = 6;
+            //Grab the next 24 hours of temps and precepitation and average it
+            for i in 0..amount_to_average {
+                inner_temp += data["list"][i]["main"]["temp"].as_f64().expect("Temp not a number");
+                inner_prec += data["list"][i]["pop"].as_f64().expect("Pop not a number");
+            }
+            let high_of = data["list"][0]["main"]["temp_max"].as_f64().expect("High of is not a number or does not exist"); 
+            self.temp = inner_temp / amount_to_average as f64;
+            self.prec = inner_prec / amount_to_average as f64;
+            self.high_of = high_of;
+            //let return_vec: Result<Vec<T>> = vec![temp, pop, high_of];
+            Ok(())
+        }
     }
-*/
+
 
 /* async fn get_data() -> Result<(), Error> {
     let data = fs::read_to_string("/home/engi/Documents/projects/weather_Reporter/api.txt").expect("Unable to read file");
@@ -87,45 +106,15 @@ impl Weather {
     Ok(())
 }*/
 
-fn process_data(content: &str) -> Result<()>{
-    //Used imports
-    use serde_json::Value;
-    //Parsing string and converting to JSON file
-    let data: Value = serde_json::from_str(content)?;
-    //Other variables for establishing
-    let mut temp: f64 = 0.0;
-    let mut pop: f64 = 0.0;
-    let amount_to_average = 6;
-    //Grab the next 24 hours of temps and precepitation and average it
-    for i in 0..amount_to_average {
-        temp += data["list"][i]["main"]["temp"].as_f64().expect("Temp not a number");
-        pop += data["list"][i]["pop"].as_f64().expect("Pop not a number");
-    }
-    let high_of = &data["list"][0]["main"]["temp_max"]; 
-    println!("high of {}, with a temp of {}, with a pop of {}", high_of, temp, pop);
-    //println!("{}", data["list"][0]);
-    Ok(())
-}
-
-fn file_write(data: &str) -> Result<()> {
-    use chrono::Utc;
-    use std::fs::*;
-
-    //File name creation
-    let now = Utc::now();
-    let name :String = now.date_naive().to_string() + "WeatherReport.json";
-
-    //Add data to the file
-    let file = File::create(name);
-    file?.write_fmt(format_args!("{}", data)).expect("File already exists");
-    Ok(())
-} 
-
 fn main() {
     use std::fs;
-    let content: &str = &fs::read_to_string("/home/engi/Documents/projects/weather_reporter/2024-10-02WeatherReport.json")
-    .expect("Should have been able to read the file");
-    //println!("{}", content);
-    let _ = file_write("test");
-    let _ = process_data(content);
+    let mut today = Weather { 
+        json: fs::read_to_string("/home/engi/Documents/projects/weather_reporter/2024-10-02WeatherReport.json")
+        .expect("Should have been able to read the file"),
+        high_of: 0.0,
+        temp: 0.0,
+        prec: 0.0,
+    };
+    today.process_data().expect("Failure to process data");
+    println!("{:?}", today.recommender());
 }
