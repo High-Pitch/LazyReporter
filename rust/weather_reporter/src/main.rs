@@ -1,7 +1,6 @@
 use math::round;
 use serde_json::{Result, Value};
-//use reqwest::Error;
-
+use std::process::Command;
 
 /*#[derive(Debug)] struct Post {
     id: Option<i32>,
@@ -91,8 +90,7 @@ impl Weather {
             //let return_vec: Result<Vec<T>> = vec![temp, pop, high_of];
             Ok(())
         }
-    }
-
+}
 
 /* async fn get_data() -> Result<(), Error> {
     let data = fs::read_to_string("/home/engi/Documents/projects/weather_Reporter/api.txt").expect("Unable to read file");
