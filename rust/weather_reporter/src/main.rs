@@ -1,6 +1,6 @@
 use math::round;
 use serde_json::{Result, Value};
-//use std::process::Command;
+use std::process::Command;
 
 /*#[derive(Debug)] struct Post {
     id: Option<i32>,
@@ -86,7 +86,6 @@ impl Weather {
         //rounding and message return creation
         let temp: f64 = round::stochastic(self.temp, 1);
         let prec: f64 = round::stochastic(self.prec.into(), 1); 
-        
         let mut message = String::new();
         
         if rain_quota < prec {
@@ -125,7 +124,7 @@ impl Weather {
         }
 }
 
-/* async fn get_data() -> Result<(), Error> {
+/* async fn get_data() -> Result<(), Erroto_owned()r> {
     let data = fs::read_to_string("/home/engi/Documents/projects/weather_Reporter/api.txt").expect("Unable to read file");
     //Make API call
     let response = reqwest::get(data).await?;
@@ -151,4 +150,8 @@ fn main() {
     println!("{:?}", today.temp);
     println!("{:?}", today.prec);
     println!("{:?}", today.high_of);
+    let output = Command::new("./weather-reporter-ui.py")
+    .arg("-t ".to_owned() + &today.temp.to_string() + " -ho " + &today.high_of.to_string() + " -r " + &today.prec.to_string() + " -j " + &today.recommender())
+    .output()
+    .expect("Failed to execute command");
 }
