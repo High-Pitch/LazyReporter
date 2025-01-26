@@ -6,7 +6,8 @@ I was bored and wanted to create a low power weather reporter to hang in my clos
 
 Previously was designed to push notifications with a bash script within linux. I changed it to being a device, as I wanted to continue working on it.
 
-## To do
+## To do weather_reporter
+High-Pitch/weat
  * Add username autodetect
  * Make case
 
@@ -50,7 +51,7 @@ Previously was designed to push notifications with a bash script within linux. I
 ### Me: High-Pitch
 
 ## Version History
-* 1
+* 1.0
     * Personal one in usage
     * Temporary case
 * 0.4
