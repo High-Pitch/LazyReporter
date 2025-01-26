@@ -69,7 +69,7 @@
                 "gust": 1.05
             },
             "visibility": 10000,
-            "pop": 0,
+            "pop": 1,
             "sys": {
                 "pod": "n"
             },
@@ -105,7 +105,7 @@
                 "gust": 1.28
             },
             "visibility": 10000,
-            "pop": 0,
+            "pop": 1,
             "sys": {
                 "pod": "n"
             },
