@@ -34,9 +34,7 @@ Previously was designed to push notifications with a bash script within linux. I
 
 * How to run the program
 1. Enable permissions for the program
-```
-sudo chmod 700 weather-reporter-app
-```
+```sudo chmod 700 weather-reporter-app```
 2. Run the data gatherer
 ```./weather-reporter-data.sh```
 3. Run the app
